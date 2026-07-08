@@ -111,6 +111,9 @@ nav{
 .navigation-icons button:hover{
     background: #c2185b;
 }
+.nav{
+    animation: zoom 15s infinite alternate;
+}
 
 
 .Acceuils{
@@ -164,19 +167,6 @@ nav{
 .Acceuils{
     animation: zoom 15s infinite alternate;
 }
-
-@keyframes zoom{
-    from{
-        background-size: 100%;
-    }
-    to{
-        background-size: 110%;
-    }
-}
-/*  */
-
-
-
 
 /* ================= Présentation ================= */
 
@@ -1031,4 +1021,48 @@ li{
     border-top: 1px solid #555;
     color: #bbb;
     font-size: 15px;
+}
+
+@keyframes zoom{
+    from{
+        background-size: 100%;
+    }
+    to{
+        background-size: 110%;
+    }
+}
+
+
+
+@media screen and (max-width:768px){
+    nav{
+        display: flex;
+        flex-direction: column;
+       
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .menu img,.logo{
+        width: 70px;
+        height: auto;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .navigation-icons{
+        display: flex;
+         gap: 15px;
+        margin-top: 15px;
+    }
+    .Acceuils{
+    animation: zoom 15s infinite alternate;
+}
+    
+    button{
+        margin-top: 10px;
+    }
 }
